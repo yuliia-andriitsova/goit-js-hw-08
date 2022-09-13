@@ -12,7 +12,7 @@ function durationSaveToStorage({ seconds }) {
   localStorage.setItem(timeKey, seconds);
 }
 
-// проерка на перезагрузку страницы и ф-я срабатывает после перезагрузки страницы
+// проверка на перезагрузку страницы и ф-я срабатывает после перезагрузки страницы
 window.addEventListener('load', newStart);
 
 player.on('timeupdate', Throttle(durationSaveToStorage, 1000));
